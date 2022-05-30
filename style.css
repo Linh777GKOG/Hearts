@@ -13,8 +13,19 @@ body {
 span {
   position: absolute;
   pointer-events: none;
+  animation: fadeInOut 1s linear infinite;
 }
 
+@keyframes faceInOut {
+  0%,
+  100% {
+    opacity: 0;
+  }
+  20%,
+  80% {
+    opacity: 1;
+  }
+}
 span::before {
   content: "";
   position: absolute;
@@ -22,4 +33,14 @@ span::before {
   height: 100px;
   background: url(heart.png);
   background-size: cover;
+  animation: moveShape 1s linear infinite;
+}
+
+@keyframes moveShape {
+  0% {
+    transform: translate(0) rotate(0deg);
+  }
+  100% {
+    transform: translate(300px) rotate(360deg);
+  }
 }
