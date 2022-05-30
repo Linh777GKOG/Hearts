@@ -12,4 +12,14 @@ body {
 
 span {
   position: absolute;
+  pointer-events: none;
+}
+
+span::before {
+  content: "";
+  position: absolute;
+  width: 100px;
+  height: 100px;
+  background: url(heart.png);
+  background-size: cover;
 }
